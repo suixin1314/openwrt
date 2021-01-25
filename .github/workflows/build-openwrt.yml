@@ -71,6 +71,12 @@ jobs:
     - name: install ssr-plus and passwall
       run: cd openwrt/package && git clone https://github.com/kenzok8/openwrt-packages.git && git clone https://github.com/kenzok8/small.git
       
+    - name: install OpenAppFilter
+      run: cd openwrt/package && git clone https://github.com/destan19/OpenAppFilter.git
+    
+    - name: install sever酱
+      run: cd openwrt/package && git clone github.com:sunlanhao/luci-app-serverchan-1.git
+      
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
