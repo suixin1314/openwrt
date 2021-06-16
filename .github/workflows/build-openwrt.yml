@@ -74,9 +74,7 @@ jobs:
     
     - name: install OpenAppFilter
       run: cd openwrt/package && git clone https://github.com/destan19/OpenAppFilter.git
-      
-    - name: fix
-      run:  rm -rf ./tmp && ./scripts/feeds uninstall -a && ./scripts/feeds clean &&./scripts/feeds update -a && ./scripts/feeds install -a
+    
       
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
